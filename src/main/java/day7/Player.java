@@ -18,10 +18,14 @@ public class Player {
     }
 
     public void run() {
-        this.stamina--;
         if (this.stamina == MIN_STAMINA) {
-            System.out.println("Футболист устал, и он уходит отдохнуть на скамейку запасных");
-            countPlayers--;
+            System.out.println("Выносливость футболиста не может опуститься ниже 0");
+        } else {
+            this.stamina--;
+            if (this.stamina == MIN_STAMINA) {
+                System.out.println("Футболист устал, и он уходит отдохнуть на скамейку запасных");
+                countPlayers--;
+            }
         }
     }
 

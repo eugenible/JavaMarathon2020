@@ -27,8 +27,8 @@ public class Airplane {
     }
 
     public void info() {
-        System.out.print("Изготовитель: " + this.mfr + ", год выпуска: " + this.year + ", длина: " + this.length);
-        System.out.println(" м, вес: " + this.weight + " кг, количество топлива в баке: " + this.fuel + " л");
+        System.out.print("Изготовитель: " + this.mfr + ", год выпуска: " + this.year + ", длина: " + this.length +
+                " м, вес: " + this.weight + " кг, количество топлива в баке: " + this.fuel + " л");
     }
 
     public void fillUp(int fuel) {
