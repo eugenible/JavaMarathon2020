@@ -22,7 +22,6 @@ public class TestFigures {
         return sum;
     }
 
-
     public static void main(String[] args) {
 
         Figure[] figures = new Figure[]{
