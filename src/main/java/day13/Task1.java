@@ -6,6 +6,6 @@ public class Task1 {
 
 
 
-        
+
     }
 }
