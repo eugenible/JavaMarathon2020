@@ -15,7 +15,7 @@ public class Task1 {
             String str = readIt.nextLine();
             String[] shoes = str.split(";");
             if (Integer.parseInt(shoes[2]) == 0) {
-                writeIt.println(str);
+                writeIt.println(str.replace(";", ","));
             }
         }
         writeIt.close();
