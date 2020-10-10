@@ -16,7 +16,7 @@ public class Task2 {
             boolean isDoc2 = doc2.createNewFile();
             PrintWriter writeIt = new PrintWriter(doc1);
 
-            for (int i = 0; i <= 1000000; i++) {
+            for (int i = 0; i < 1000; i++) {
                 writeIt.print((int) (Math.random() * 101) + " ");
             }
 
@@ -28,22 +28,18 @@ public class Task2 {
 
             readIt.close();
 
-            int[] segmentTwenty = new int[20];
             int counter = 0;
+            int sum = 0;
 
+            writeIt = new PrintWriter(doc2);
             for (String num : nums) {
                 counter++;
-                segmentTwenty[counter] = Integer.parseInt(num);
+                sum += Integer.parseInt(num);
 
-                if (counter == 19) {
-                    int sum = 0;
-                    for (int elem : segmentTwenty) {
-                        sum += elem;
-                        elem = 0;
-                    }
-                    writeIt = new PrintWriter(doc2);
+                if (counter == 20) {
                     writeIt.print((double) sum / 20 + " ");
                     counter = 0;
+                    sum = 0;
                 }
             }
             writeIt.close();
@@ -64,6 +60,6 @@ public class Task2 {
             sum += Double.parseDouble(elem);
         }
         readIt.close();
-        System.out.println(sum);
+        System.out.println((int) sum);
     }
 }
